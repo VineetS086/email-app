@@ -3,18 +3,17 @@ html {
 }
 
 body {
+  display:grid;
   height: 100%;
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  display: grid;
-  justify-items: center;
+  justify-items: center; 
   align-items: center;
-  background-color: cyan;
+  background-color:#2fccdf;
 }
 
 #main-holder {
   width: 55%;
-  height: 80%;
+  height: 100%;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -78,4 +77,16 @@ body {
   background-color: green;
   cursor: pointer;
   outline: none;
+}
+
+.footer {
+  bottom: 0;
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#foot{
+  color: #fff;
 }

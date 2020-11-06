@@ -2,6 +2,10 @@
 
 ## A E-mail sending web app which can send mail to multiple people by single click.
 
+##Hosting Link :
+
+[https://vineets086.github.io/email-app/]
+
 ### Colour Pallet to be followed:
 
 1. #ffffff 

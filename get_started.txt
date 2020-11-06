@@ -4,8 +4,8 @@ Django Version  =  3.1.2
 **************************************
 Starting Project:
     directory - ../src/
-    Unix - $ python3 manage.py runserver
-    Win  - > py manage.py runserver
+    Linux/Mac- $ python3 manage.py runserver
+    Windows  - > py manage.py runserver
 
     login Page : ../login
     signup Page : ../signup
