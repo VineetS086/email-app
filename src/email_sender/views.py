@@ -50,3 +50,6 @@ def signup_view(request):           #SignUp
 def email_sender_view(request):     #POST Request Form
     update_history(request)
     return HttpResponse('<h1>Hello, World!</h1>email_sender')
+
+
+##Anish
