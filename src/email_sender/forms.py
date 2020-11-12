@@ -3,7 +3,7 @@ from django import forms
 class EmailForm(forms.Form):
 
     from_addr       = forms.EmailField(label="From",
-                        widget=forms.TextInput(
+                        widget=forms.EmailInput(
                             attrs={
 
                                 "class"         : "form-control",

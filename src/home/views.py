@@ -29,7 +29,9 @@ def home_view(request):             #
 #Login and Logout
 def login_view(request):            #Login
     form = LoginUserForm()
-    context = {'form'  : form}
+    context = {
+        'form'  : form
+        }
     if request.method == "POST":
         form = LoginUserForm(request, request.POST)
         if form.is_valid():
@@ -57,14 +59,11 @@ def signup_view(request):           #SignUp
     #update_history(request)
     form = CreateUserForm()
     
-
     if request.method == "POST":
         form = CreateUserForm(request.POST)
         if form.is_valid():
             create_user_(form)
             return HttpResponse("User Saved")
-
-
 
     context = {
         'form'  : form,

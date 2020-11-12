@@ -34,31 +34,40 @@
         
         <!-- Landing page content comes here -->
         <div class="container shadow-lg p-3 mb-5 bg-white rounded messagearea">
-            <h3>Message:</h3>
             <form method="POST">
                 {% csrf_token %}
-                {{form}}
-                <!--
+                <h3>Login:</h3>
                 <div class="form-group">
-                  <label for="Input1">To:</label>
-                  <input type="email" name="To" class="form-control" id="to" placeholder="name@example.com">
+                    <label for="from_addr">From:</label>
+                    {{form.from_addr}}
                 </div>
                 <div class="form-group">
-                    <label for="Input1">Cc:</label>
-                    <input type="email" name="Cc" class="form-control" id="cc">
+                    <label for="password">Password:</label>
+                    {{form.password}}
+                </div>
+                    <br>
+
+                <h3>Message:</h3>
+                <div class="form-group">
+                  <label for="to_addr">To:</label>
+                  {{form.to_addr}}
+                </div>
+                <div class="form-group">
+                    <label for="cc_addr">Cc:</label>
+                    {{form.cc_addr}}
                   </div>
                   <div class="form-group">
-                    <label for="Input1">Bcc:</label>
-                    <input type="email" name="Bcc" class="form-control" id="bcc">
+                    <label for="bcc_addr">Bcc:</label>
+                    {{form.bcc_addr}}
                   </div>
                   <div class="form-group">
-                    <label for="Input1">Subject:</label>
-                    <input type="email" name="Subject" class="form-control" id="subject">
+                    <label for="subject">Subject:</label>
+                    {{form.subject}}
                   </div>
                 <div class="form-group">
-                  <label for="Textarea1"></label>
-                  <textarea name="TextArea" class="form-control" id="Textarea" rows="8"></textarea>
-                </div>-->
+                  <label for="text"></label>
+                  {{form.text}}
+                </div>
                 <button type="submit" id="send" class="btn btn-primary mb-2">Send</button>
                 <div class="form-group chosefile">
                     <input type="file" name="File" class="form-control-file" id="File">
