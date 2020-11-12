@@ -34,7 +34,7 @@ import re
 def all_mails_in_branch(year, branch):
     mail_domain = '@smvdu.ac.in'
     students = data[year][branch]
-    students_email = [year[2:]+branch+'0'*(3-len(str(i)))+str(i)+mail_domain for i in range(1,students+1)]
+    students_email = [year[2:]+branch.lower()+'0'*(3-len(str(i)))+str(i)+mail_domain for i in range(1,students+1)]
     print(len(students_email))
     return(students_email)
 
@@ -42,10 +42,13 @@ def all_mails_in_branch(year, branch):
 def email_format(email_keywords):
     added_emails = []
     for email_keyword in email_keywords:
-        year    = email_keyword[1:5]
-        branch  = email_keyword[6:-1]
-        added_emails.extend(all_mails_in_branch(year, branch))
-    
+        try:
+            year    = email_keyword[1:5]
+            branch  = email_keyword[6:-1]
+            added_emails.extend(all_mails_in_branch(year, branch.upper()))
+        except:
+            pass
+
     return(added_emails)
 
 def process(email_str):
@@ -58,12 +61,11 @@ def process(email_str):
     print(email_keywords)
     print(email_list)
     email_list.extend(email_format(email_keywords))
-    print(email_list)
-    print(len(email_list))
+    return(email_list)
 
 #[2019-CSE]
 
-email_str = '19bcs086@smvdu.ac.in vineet@gmail.com , [2019-BCS] [2018-BME] ,[2018-BEC]'
-process(email_str)
+'''email_str = '19bcs086@smvdu.ac.in vineet@gmail.com , [2019-BCS] [2018-BME] ,[2019-BCS]'
+process(email_str)'''
 
 #all_mails_in_branch('2019','BEC')
