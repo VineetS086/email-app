@@ -15,9 +15,9 @@ def index(request):
         if form.is_valid():
             #send mail
             
-            print(form.cleaned_data)
+            #print(form.cleaned_data)
             send_mail_(form.cleaned_data)
-            print("Mail Sent")
+            #print("Mail Sent")
             return redirect("Email:Email")
 
 
