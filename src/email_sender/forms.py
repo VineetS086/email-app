@@ -22,7 +22,7 @@ class EmailForm(forms.Form):
                             }
                         ))
 
-    to_addr         = forms.CharField(label="TO", 
+    to_addr         = forms.CharField(label="TO", required=False,
                         widget=forms.TextInput(
                             attrs={
 

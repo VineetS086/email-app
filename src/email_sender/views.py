@@ -18,7 +18,7 @@ def index(request):
             #print(form.cleaned_data)
             send_mail_(form.cleaned_data)
             #print("Mail Sent")
-            return redirect("Email:Email")
+            return redirect("Home:Home")
 
 
     context = {
