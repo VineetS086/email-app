@@ -65,7 +65,7 @@ def process(email_str):
     email_list = [email for email in email_list if email not in email_keywords and is_valid_Mail(email)]
 
     email_list.extend(email_format(email_keywords))
-    email_list = sorted(list(set(email_list)),reverse = True)
+    email_list = sorted(list(set(email_list)))
     #print(len(email_list))
     #print(email_list)
     return email_list

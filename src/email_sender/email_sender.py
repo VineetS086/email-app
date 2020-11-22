@@ -24,17 +24,20 @@ def send_mail_(args):
         
         #message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
         message     = "From: %s\r\n" % from_addr
-        message    += "To: %s\r\n" % ",".join(to_addr)
-        message    += "CC: %s\r\n" % ",".join(cc_addr)
+        message    += "To: %s\r\n" % args['to_addr']
+        message    += "CC: %s\r\n" % args['cc_addr']
         message    += "Subject: %s\r\n" % SUBJECT
         message    += "\r\n" 
         message    += TEXT
 
-        to_addr    = to_addr + cc_addr + bcc_addr
-
-        #print('message_compiled')
+        recivers    = to_addr + cc_addr + bcc_addr
+        print(len(recivers))
         #print(message)
-        server.sendmail(from_addr, to_addr, message)
-        server.quit()
+        while len(recivers)>99:
+            rec = recivers[:100]
+            recivers = recivers[100:]
+            server.sendmail(from_addr, rec, message)
+            #print("Sent to: ",rec)
+        server.sendmail(from_addr, recivers, message)
         #print('sent')
         
