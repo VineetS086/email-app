@@ -5,16 +5,31 @@
 }
 
 body {
-    display: grid;
-    justify-items: center;
+    /* display: grid; */
+    /* justify-items: center;
     align-items: center;
-    min-height: 100%;
+    min-height: 100%; */
     background-color: #2fccdf;
 }
-.mainpage {
-    min-height: 100%;
+.navbar-brand{
+  font-family: "Montserrat";
+  font-size: 1.5rem;
 }
-
+.landing-pic{
+  height: 450px;
+  weight:450px;
+}
+.mainpage{
+  color: #fff;
+}
+h1{
+  font-family: "Montserrat-bold";
+  font-size: 3.5rem;
+}
+p{
+  font-family: "Ubuntu";
+  font-size: 1.4rem;
+}
 .messagearea {
     display: block;
     width:50%;
@@ -25,12 +40,9 @@ body {
 }
 .footer
 {
-  position: absolute;
-  margin-bottom: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  text-align: center;
+text-align: center;
+margin-bottom: 0;
+
 }
  a {
      color: #fff;
