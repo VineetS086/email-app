@@ -12,7 +12,7 @@ def create_user_(form):
     User_Key.objects.create(user=user)
     user.user_key.activate(False)
  
-
+# key = user.user_key.key 
 
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')

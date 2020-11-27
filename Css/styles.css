@@ -40,9 +40,18 @@ p{
 }
 .footer
 {
+<<<<<<< HEAD
 text-align: center;
 margin-bottom: 0;
 
+=======
+  position: absolute;
+  margin-bottom: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+>>>>>>> 83d7b716c364753e0b9708229e6f8a7cc155dca4
 }
  a {
      color: #fff;
